@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+h1{
+    display: inline-block;
+}
+.header{
+    width: 100%;
+    height:100px;
+    display: block;
+    background-color:rgba(0, 68, 255, 0.466);
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-left: 12px;
+    padding: 20px 12px;
+}
+.navigation{
+    float: right;
+    height: 100%;
+    font-size: 18px;
+
+}
+.navigation a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 40px;
+
+}
+.navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    font-family: 'Josefin Sans', sans-serifs;
+    font-size: 20px;
+}
+.name{
+    font-size: 35px;
+    padding: 27px 0px;
+    color: rgba(255, 255, 255, 0.945);
+    font-family: 'Cinzel';
+}
+    
+footer{
+    width: 100%;
+    height: 250px;
+    background-color: black;
+    
+}
+.mid-portion{
+    min-height: 500px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.678);
+
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+
+/* For viewuser html page*/ 
+
+
+.mid-portion-table{
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.678);
+
+}
+.table{
+    width: 40px;
+}
+
+/*Modal - Styling*/
+
+
+.bg-modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-contents {
+	height: 300px;
+	width: 500px;
+	background-color: white;
+	text-align: center;
+	padding: 30px;
+	position: relative;
+	border-radius: 4px;
+}
+
+input {
+	margin: auto;
+	display: block;
+	width: 45%;
+	padding: 8px;
+	border: 3px round gray;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+	
+}
+.close:hover {
+    color: #666;
+}
+.button-modal {
+    background-color: blue;
+    border: 2px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 28px;
+    color: white;
+    margin-top: 25px;
+    display: inline-block;
+}
+.button-modal:hover {
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+}
+/* Drop down box style*/
+/*box {
+    
+    transform: translate(-50%, -50%);
+  }*/
+  label
+  {
+      color: black;
+      font-size: 20px;
+      font-family: 'Gill Sans', sans-serif;
+  }
+  .box {
+    margin: 1%;
+    margin-bottom: 1%;
+
+
+}
+
+  .box select {
+    background-color: #ecacac;
+    color: white;
+    padding: 12px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    display: inline;
+  }
+  
+  .box::before {
+    
+    font-family: FontAwesome;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+  
+.box:hover{
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+.box select option {
+    padding: 30px;
+  }
+

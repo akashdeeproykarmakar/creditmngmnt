@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Credit Management</title>
+      <link rel="stylesheet" href="/style.css" type="text/css">
+      <link rel="stylesheet" href="/button.css" type="text/css">
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/table.css" type="text/css">
+      <script src="app2.js"></script>
+      
+      </head>
+  <body>
+<header>
+      <div class="header">
+        <a href="index.html">
+          <img class = "logo" src="/logo2.png" alt="Credit" >
+          <h1 class="name">Credit Management</h1>
+        </a>
+        <ul class= "navigation">
+            <a href="view" method = "GET"><li>View All Users</li></a>
+            </ul>
+      </div>  
+        
+</header>
+<section class="mid-portion">
+  <h2>Transfer History</h2>
+  <% if(user!=null) { %>
+    <table class="vitamins" >
+      <thead>
+        <tr>
+            <th>#</th>
+            <th>From User </th>
+            <th>To User</th>
+            <th>Credits</th>
+        </tr>
+      </thead>
+  <% user.forEach(function(item, i){ %>
+    
+      <tbody>        
+          <tr>
+            
+              <td><%= i+1 %></td>
+              <td ><%= item.From %></a></td>
+              <td><%= item.To%></td>
+              <td><%= item.Credit %></td>
+                           
+          </tr>
+          
+      </tbody>
+        <% }) %>
+    </table>
+        <% } %>
+</section>
+<footer>
+    <div class="footer">
+     <h2></h2>
+     </div>
+</footer>
+  </body>
+</html>

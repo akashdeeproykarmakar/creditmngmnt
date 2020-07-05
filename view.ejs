@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Credit Management</title>
+      <link rel="stylesheet" href="/style.css" type="text/css">
+      <link rel="stylesheet" href="/button.css" type="text/css">
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/table.css" type="text/css">
+      <script src="app2.js"></script>
+      </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="index.html">
+          <img class = "logo" src="/logo2.png" alt="Credit" >
+          <h1 class="name">Credit Management</h1>
+        </a>
+        <ul class= "navigation">
+          <a href="transferhistory" method = "GET"><li>Transfer History</li></a>
+          </ul>
+      </div>    
+</header>
+<section class="mid-portion">
+  <h2>Users</h2>
+  <% if(details!=null) { %>
+    <table class="vitamins" >
+      <thead>
+        <tr>
+            <th>#</th>
+            <th>Name </th>
+            <th>Phone</th>
+            <th>E-Mail</th>
+            <th>Current Credit </th>
+            <th>   </th>
+        </tr>
+      </thead>
+  <% details.forEach(function(item, i){ %>
+    
+      <tbody>        
+          <tr>
+            
+              <td><%= i+1 %></td>
+              <td ><a class ="transfer" href="#" ><%= item.Name %></a></td>
+              <td><%= item.Phone%></td>
+              <td><%= item.Email %></td>
+              <td><%= item.Currentcredit%></td>
+              <td></td>
+              
+          </tr>
+          
+      </tbody>
+        <% }) %>
+    </table>
+        <% } %>
+</section>
+<footer>
+  <div class="footer">
+    <h2></h2>
+  </div>
+</footer>
+
+<!---Modal section--->
+
+<div class="bg-modal">
+	<div class="modal-contents">
+
+		<div class="close">+</div>
+		<form action="/creditsend" method="POST">
+      <label class="label">Select User</label>
+      <div class="box">
+        <select name="From">
+          <% details.forEach(function(item){ %>
+          <option value="<%= item.Name%>"><%= item.Name%></option>
+          <% }) %>
+        </select>
+          <br>
+          <label class = "label">Select User</label>
+            <div class="box">
+                
+                <select name="To">
+                    <% details.forEach(function(item){ %>
+                  <option value="<%= item.Name%>"><%= item.Name %></option>
+                  <% }) %>
+                </select>
+              </div>
+              <label class = "label">Credit</label>
+              <input type="number" name="Credit" placeholder="Credit">
+              <button type="submit" class="button-modal">Submit</button>
+		</form>
+
+	</div>
+</div>
+<script>
+  document.querySelectorAll('.transfer').forEach(item => {
+    item.addEventListener("click", function() {
+
+  document.querySelector('.bg-modal').style.display = "flex";
+  /*document.querySelector('.button').style.display = "none";*/
+})
+});
+
+    document.querySelector('.close').addEventListener("click", function() {
+    document.querySelector('.bg-modal').style.display = "none";
+    document.querySelector('.button').style.display = "flex";
+});
+</script>
+
+
+
+</body>
+</html>
