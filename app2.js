@@ -4,7 +4,7 @@ const app = express();
 const MongoClient = require('mongodb').MongoClient  
 const uri = "mongodb+srv://akashkarma:1234@database.q8w8g.gcp.mongodb.net/CreditManagement?retryWrites=true&w=majority";
 const ObjectId = require('mongodb').ObjectID;
-const port = process.env.PORT ;
+const port = process.env.PORT || 8080;
 
 MongoClient.connect(uri,{ useUnifiedTopology: true })
 .then(client => {
@@ -58,6 +58,7 @@ app.post('/creditsend', (req, res)=> {
           })
           .catch(error => console.error(error))
     });
-server.listen(port, () => {
-  console.log(`Listening on http://localhost:${port}/`);
+
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
 });
