@@ -21,6 +21,9 @@ app.use(express.static(path.join(__dirname, "assests")));
 app.use(express.static(path.join(__dirname, "./")));
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('views', './');
+app.get('/', (req, res) => {
+      res.render("index.html")
+   });
 app.set("view engine", "ejs");
 
 app.get('/view', (req, res) => {
