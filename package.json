@@ -1,11 +1,13 @@
 {
+  "homepage" : "https://akashdeeproykarmakar.github.io/creditmngmnt/index.html/",
   "name": "credit-management",
   "version": "1.0.0",
   "description": "",
   "main": "app2.js",
   "scripts": {
+    "predeploy" : "node app2.js"
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app2.js"
+    "start": "app2.js"
   },
   "author": "",
   "license": "ISC",
